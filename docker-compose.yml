@@ -31,3 +31,10 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.1.0/24
